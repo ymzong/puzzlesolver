@@ -1,0 +1,4 @@
+puzzlesolver
+============
+
+Logic Puzzle Solver
