@@ -1,0 +1,11 @@
+Configuration filename: problem/B.py
+-------------------- START SOLVING --------------------
+Solution 1 found.
+Steve O'Hara 	team: Tip-Tops 	position: Catcher 	
+Paul Gregory 	team: Rebels 	position: Center Fielder 	
+George Kirk 	team: Whales 	position: Left Fielder 	
+Mark Tyrone 	team: Federals 	position: Third Baseman 	
+Frank Hall 	team: Terrapins 	position: Shortstop 	
+Press ENTER to continue...
+Solving complete! Found 1 solution(s) in total.
+Thank you for using Logic-Problem-Solver by Jimmy!

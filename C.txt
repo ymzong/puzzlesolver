@@ -1,0 +1,11 @@
+Configuration filename: problem/C.py
+-------------------- START SOLVING --------------------
+Solution 1 found.
+Steve O'Hara 	number: 36 	day: 2 	food: Cracker Jack 	
+Paul Gregory 	number: 24 	day: 4 	food: Peanut 	
+George Kirk 	number: 20 	day: 5 	food: Ice Cream 	
+Mark Tyrone 	number: 32 	day: 1 	food: Hot Dog 	
+Frank Hall 	number: 16 	day: 6 	food: Pretzel 	
+Press ENTER to continue...
+Solving complete! Found 1 solution(s) in total.
+Thank you for using Logic-Problem-Solver by Jimmy!

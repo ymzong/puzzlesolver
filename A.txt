@@ -1,0 +1,11 @@
+Configuration filename: problem/A.py
+-------------------- START SOLVING --------------------
+Solution 1 found.
+Steve O'Hara 	avg: 305 	position: A 	
+Paul Gregory 	avg: 295 	position: D 	
+George Kirk 	avg: 290 	position: C 	
+Mark Tyrone 	avg: 310 	position: B 	
+Frank Hall 	avg: 315 	position: E 	
+Press ENTER to continue...
+Solving complete! Found 1 solution(s) in total.
+Thank you for using Logic-Problem-Solver by Jimmy!
