@@ -13,6 +13,7 @@ class Subject(object):
     def __init__(self, avg, position, name):
         self.avg = avg
         self.position = position
+        self.namme = name
 
 #    The _validate_ function holds a dictionary of objects, indexed by
 # the IDs of the objects.
@@ -33,9 +34,16 @@ def _validate_(soln):
                 assert(soln["Frank Hall"].avg - soln[obj].avg == 5)
     except AssertionError:
         return False
-    except:
-        print "Error occured while validating tentative solution."
-        sys.exit(1)
+    #except:
+    #    print "Error occured while validating tentative solution."
+    #    sys.exit(1)
     else:
         return True
+
+# DO NOT modify this segment.
+def locate_obj(dictionary, attr_name, attr_value):
+    for k in dictionary:
+        if getattr(dictionary[k], attr_name) == attr_value:
+            return dictionary[k]
+    return 1/0  # Should not happen!
 

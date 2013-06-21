@@ -13,6 +13,7 @@ class Subject(object):
     def __init__(self, team, position, name):
         self.team = team
         self.position = position
+        self.name = name
         # Carry over information from Part A.
         if name == "Steve O'Hara":
             self.avg = 305
@@ -38,35 +39,23 @@ def _validate_(soln):
     try:
         # Start checking the clues.
         # Clue One.
-        for obj in _IDs_:
-            if soln[obj].avg == 310:
-                MVP_F = soln[obj]
-            if soln[obj].position == "Catcher":
-                Catcher = soln[obj]
-                CatcherName = obj
+        MVP_F = locate_obj(soln, "avg", 310)
+        Catcher = locate_obj(soln, "position", "Catcher")
         assert(MVP_F.team == "Federals")
         assert(abs(ord(MVP_F.posi) - ord(Catcher.posi)) == 1)
-        assert(CatcherName != "George Kirk")
+        assert(Catcher.name != "George Kirk")
         # Clue Two.
-        for obj in _IDs_:
-            if soln[obj].position == "Center Fielder":
-                CenterF = soln[obj]
-            elif soln[obj].position == "Left Fielder":
-                LeftF = soln[obj]
+        CenterF = locate_obj(soln, "position", "Center Fielder")
+        LeftF = locate_obj(soln, "position", "Left Fielder")
         assert(CenterF.team == "Rebels")
         assert(CenterF.avg - 5 == LeftF.avg)
         assert(LeftF.posi != "B")
         # Clue Three.
-        for obj in _IDs_:
-            if soln[obj].position == "Third Baseman":
-                ThirdBase = soln[obj]
-            if soln[obj].team == "Terrapins":
-                MVP_Terr = soln[obj]
-        assert(ThirdBase.avg < MVP_Terr.avg)
+        assert(locate_obj(soln, "position", "Third Baseman").avg
+                < locate_obj(soln, "team", "Terrapins").avg)
         # Clue Four.
-        for obj in _IDs_:
-            if soln[obj].team == "Whales":
-                assert(soln[obj].posi != "A")
+        assert(locate_obj(soln, "team", "Whales").posi != "A")
+
     except AssertionError:
         return False
     #except:
@@ -74,4 +63,11 @@ def _validate_(soln):
     #    sys.exit(1)
     else:
         return True
+
+# DO NOT modify this segment.
+def locate_obj(dictionary, attr_name, attr_value):
+    for k in dictionary:
+        if getattr(dictionary[k], attr_name) == attr_value:
+            return dictionary[k]
+    return 1/0  # Should not happen!
 
